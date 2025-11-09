@@ -1,36 +1,33 @@
-import { Github } from "@medusajs/icons"
-import { Button, Heading } from "@medusajs/ui"
+import LocalizedClientLink from "@modules/common/components/localized-client-link"
 
-const Hero = () => {
+export default function Hero() {
   return (
-    <div className="h-[75vh] w-full border-b border-ui-border-base relative bg-ui-bg-subtle">
-      <div className="absolute inset-0 z-10 flex flex-col justify-center items-center text-center small:p-32 gap-6">
-        <span>
-          <Heading
-            level="h1"
-            className="text-3xl leading-10 text-ui-fg-base font-normal"
-          >
-            Ecommerce Starter Template
-          </Heading>
-          <Heading
-            level="h2"
-            className="text-3xl leading-10 text-ui-fg-subtle font-normal"
-          >
-            Powered by Medusa and Next.js
-          </Heading>
-        </span>
-        <a
-          href="https://github.com/medusajs/nextjs-starter-medusa"
-          target="_blank"
+    <section className="relative w-full h-screen">
+      <div
+        className="absolute inset-0 bg-cover bg-center"
+        style={{ backgroundImage: `url(/images/hero.png)` }}
+      />
+
+      <div className="relative z-10 flex flex-col items-center justify-center h-full text-center text-white px-4">
+        <h1 className="text-5xl font-bold uppercase drop-shadow-lg">
+          Welcome to the next level
+        </h1>
+        <p className="mt-4 text-xl drop-shadow-md">
+          The future of game shopping starts here
+        </p>
+
+        <LocalizedClientLink
+          href="/store"
+          className="mt-12 inline-block px-6 py-3 bg-cyan-500 hover:bg-cyan-600 text-black font-bold rounded-lg uppercase transition"
         >
-          <Button variant="secondary">
-            View on GitHub
-            <Github />
-          </Button>
-        </a>
+          Explore the Store
+        </LocalizedClientLink>
+
+        <span className="mt-4 text-sm">
+          Instant delivery. Global access. No DRM.
+        </span>
       </div>
-    </div>
+      <div className="absolute inset-0 bg-black/40"></div>
+    </section>
   )
 }
-
-export default Hero
