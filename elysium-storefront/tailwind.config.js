@@ -8,6 +8,13 @@ module.exports = {
     "./src/modules/**/*.{js,ts,jsx,tsx}",
     "./node_modules/@medusajs/ui/dist/**/*.{js,jsx,ts,tsx}",
   ],
-
+  theme: {
+    extend: {
+      fontFamily: {
+        sans: ["Poppins, sans-serif"],
+        hero: ["Bruno ACE SC, sans-serif"],
+      },
+    },
+  },
   plugins: [require("tailwindcss-radix")()],
 }

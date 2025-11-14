@@ -4,29 +4,41 @@ import CartButton from "@modules/layout/components/cart-button"
 
 export default async function Nav() {
   return (
-    <div className="sticky top-0 inset-x-0 z-50 group">
-      <header className="relative h-16 mx-auto border-b duration-200 bg-white border-ui-border-base">
-        <nav className="content-container txt-xsmall-plus text-ui-fg-subtle flex items-center justify-between w-full h-full text-small-regular">
+    <div className="sticky top-0 inset-x-0 z-50 group bg-white border-b-2 border-pink-500">
+      <header className="relative h-20 mx-10">
+        <nav className="flex items-center w-full h-full text-sm">
           <div className="flex items-center h-full">
             <LocalizedClientLink
               href="/"
-              className="txt-compact-xlarge-plus hover:text-ui-fg-base uppercase"
+              className="text-lg md:text-2xl font-bold"
             >
               Elysium
             </LocalizedClientLink>
           </div>
 
-          <div className="flex items-center gap-x-6 h-full flex-1 basis-0 justify-end">
-            <div>
-              <a href="/store">Store</a>
-            </div>
-            <div>
-              <LocalizedClientLink href="/account">Account</LocalizedClientLink>
-            </div>
+          <div className="flex items-center gap-x-6 h-full flex-1 justify-evenly">
+            <LocalizedClientLink
+              href="/store"
+              className="border-b-2 border-transparent hover:border-pink-500 transition-colors duration-200"
+            >
+              Store
+            </LocalizedClientLink>
+
+            <LocalizedClientLink
+              href="/account"
+              className="border-b-2 border-transparent hover:border-pink-500  transition-colors duration-200"
+            >
+              Account
+            </LocalizedClientLink>
 
             <Suspense
               fallback={
-                <LocalizedClientLink href="/cart">Cart (0)</LocalizedClientLink>
+                <LocalizedClientLink
+                  href="/cart"
+                  className="border-b-2 border-transparent hover:border-pink-500  transition-colors duration-200"
+                >
+                  Cart (0)
+                </LocalizedClientLink>
               }
             >
               <CartButton />

@@ -9,21 +9,23 @@ export default function Hero() {
       />
 
       <div className="relative z-10 flex flex-col items-center justify-center h-full text-center text-white px-4">
-        <h1 className="text-5xl font-bold uppercase drop-shadow-lg">
-          Welcome to the next level
+        <h1 className="text-8xl mx-20 font-hero font-bold uppercase text-white">
+          Welcome to the{" "}
+          <span className="border-b-2 border-pink-500">next level</span>
         </h1>
-        <p className="mt-4 text-xl drop-shadow-md">
+
+        <p className="mt-14 text-2xl font-hero tracking-wider uppercase">
           The future of game shopping starts here
         </p>
 
         <LocalizedClientLink
           href="/store"
-          className="mt-12 inline-block px-6 py-3 bg-cyan-500 hover:bg-cyan-600 text-black font-bold rounded-lg uppercase transition"
+          className="mt-24 inline-block px-6 py-3 border-2 border-pink-500 hover:bg-pink-500 font-bold rounded-lg uppercase transition duration-800 transform hover:scale-105 animate-bounce"
         >
           Explore the Store
         </LocalizedClientLink>
 
-        <span className="mt-4 text-sm">
+        <span className="mt-4 text-sm text-gray-500">
           Instant delivery. Global access. No DRM.
         </span>
       </div>

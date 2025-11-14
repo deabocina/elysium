@@ -20,7 +20,6 @@ const Thumbnail: React.FC<ThumbnailProps> = ({
   size = "small",
   isFeatured,
   className,
-  "data-testid": dataTestid,
 }) => {
   const initialImage = thumbnail || images?.[0]?.url
 
@@ -39,7 +38,6 @@ const Thumbnail: React.FC<ThumbnailProps> = ({
           "w-full": size === "full",
         }
       )}
-      data-testid={dataTestid}
     >
       <ImageOrPlaceholder image={initialImage} size={size} />
     </Container>
