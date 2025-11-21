@@ -19,16 +19,18 @@ export default async function ProductPreview({
 
   return (
     <LocalizedClientLink href={`/products/${product.handle}`}>
-      <div>
+      <div className="w-[200px] transition-transform duration-300 hover:scale-105">
         <Thumbnail
           thumbnail={product.thumbnail}
           images={product.images}
           size="full"
           isFeatured={isFeatured}
         />
-        <div className="flex txt-compact-medium mt-4 justify-between">
-          <Text>{product.title}</Text>
-          <div className="flex items-center gap-x-2">
+
+        <div className="mt-3">
+          <Text className="text-center font-medium">{product.title}</Text>
+
+          <div className="flex justify-center mt-1">
             {cheapestPrice && <PreviewPrice price={cheapestPrice} />}
           </div>
         </div>
